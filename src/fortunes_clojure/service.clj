@@ -29,4 +29,4 @@
               ;; Either :jetty, :immutant or :tomcat (see comments in project.clj)
               ::bootstrap/type :jetty
               ;;::bootstrap/host "localhost"
-              ::bootstrap/port 8080})
+              ::bootstrap/port (Integer. (or (System/getenv "PORT") 8080))})
